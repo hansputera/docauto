@@ -8,7 +8,7 @@ COPY . /home/docauto
 WORKDIR /home/docauto
 
 RUN yarn set version berry
-
 RUN yarn install
 RUN yarn build
-ENTRYPOINT ["node", "./dist/index.js"]
+
+ENTRYPOINT ["node", "/home/docauto/dist/index.js"]

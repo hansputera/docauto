@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
 
 /**
  * Find files function
@@ -13,5 +14,6 @@ export const findFiles = async (
 	const files: string[] = await fs.readdir(workspacePath);
 	const filesMatchRegex = new RegExp(`.(${filesMatch.join('|')})`, 'gi');
 
-	return files.filter(file => filesMatchRegex.test(file));
+	return files.filter(file => filesMatchRegex.test(file)).map(
+		(file) => path.resolve(workspacePath, file));
 };

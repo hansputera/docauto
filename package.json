@@ -25,5 +25,8 @@
     "eslint-config-xo-typescript": "^0.53.0",
     "rimraf": "^3.0.2",
     "typescript": ">=4.4"
+  },
+  "dependencies": {
+    "actions-toolkit": "^6.0.1"
   }
 }

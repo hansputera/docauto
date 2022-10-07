@@ -9,5 +9,6 @@ WORKDIR /home/docauto
 
 RUN yarn set version berry
 
+RUN yarn install
 RUN yarn build
 ENTRYPOINT ["node", "./dist/index.js"]

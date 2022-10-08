@@ -970,7 +970,7 @@ __metadata:
     eslint: ">=8.0.0"
     eslint-config-xo: ^0.42.0
     eslint-config-xo-typescript: ^0.53.0
-    ilovepdf-freedom: ^1.0.0
+    ilovepdf-freedom: ^1.1.0
     rimraf: ^3.0.2
     tsup: ^6.2.3
     typescript: ">=4.4"
@@ -1844,13 +1844,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilovepdf-freedom@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "ilovepdf-freedom@npm:1.0.0"
+"ilovepdf-freedom@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "ilovepdf-freedom@npm:1.1.0"
   dependencies:
     axios: ^0.27.2
     form-data: ^4.0.0
-  checksum: 3203fc44b57ed451fe318eed57139c52ebf563c5a5639692b3c2b5373c4173ec6ca9504f4f1ad24fbb70518ac1f8b44770ac2272e8843b822fd6560130380ce1
+  checksum: d074cd5781986472f594707c6d6df9e7d834330e8ebdacb58c21c6d96a940cdc265f937addf01aad8932a6dc517dc0f48a8065a0771c6de6ca8f29916059db8f
   languageName: node
   linkType: hard
 

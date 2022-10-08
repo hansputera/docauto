@@ -7,4 +7,6 @@ module.exports = defineConfig({
 	platform: 'node',
 	target: 'node16',
 	format: 'esm',
+	minify: true,
+	bundle: true,
 });

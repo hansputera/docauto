@@ -2,7 +2,7 @@
   "name": "docauto",
   "version": "1.0.0",
   "description": "Convert docx/odt files to PDF, and merge it",
-  "main": "index.js",
+  "main": "dist/index.mjs",
   "scripts": {
     "lint": "eslint \"src/**/*\"",
     "clean": "rimraf dist",
@@ -32,5 +32,6 @@
     "execa": "^6.1.0",
     "ilovepdf-freedom": "^1.1.0"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "yarn@3.2.4",
+  "type": "module"
 }

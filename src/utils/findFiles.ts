@@ -15,5 +15,5 @@ export const findFiles = async (
 	const filesMatchRegex = new RegExp(`.(${filesMatch.join('|')})`, 'gi');
 
 	return files.filter(file => filesMatchRegex.test(file)).map(
-		(file) => path.resolve(workspacePath, file));
+		file => path.resolve(workspacePath, file));
 };

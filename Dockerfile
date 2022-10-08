@@ -1,7 +1,10 @@
-FROM node:slim
+FROM node:current-alpine3.15
 
 LABEL "com.github.actions.name"="docauto"
 LABEL "com.github.actions.description"="Convert odt/docx/office files to PDF"
+
+RUN apk upgrade && \
+    apk add git curl
 
 RUN mkdir -p /home/docauto
 COPY . /home/docauto

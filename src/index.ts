@@ -13,7 +13,8 @@ Toolkit.run(async tool => {
 	tool.log.debug(config);
 
 	let findedFiles = await findFiles(workspacePath, config.files);
-	findedFiles = findedFiles.filter(fl => fl !== config.pdfPath);
+	findedFiles = findedFiles.filter(fl => fl.trim() !== config.pdfPath.trim());
+
 	tool.log.debug('Finded files:');
 	tool.log.debug(findedFiles);
 

@@ -105,5 +105,3 @@ typings/
 # Yarn
 .yarn/cache
 .yarn/*.gz
-
-dist/

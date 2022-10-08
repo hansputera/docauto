@@ -2,4 +2,4 @@ name: docauto
 description: Convert odt/docx/office files to PDF
 runs:
   using: node16
-  image: dist/index.js
+  main: dist/index.js

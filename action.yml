@@ -1,5 +1,5 @@
 name: docauto
 description: Convert odt/docx/office files to PDF
 runs:
-  using: docker
-  image: Dockerfile
+  using: node16
+  image: dist/index.js

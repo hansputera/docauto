@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*\"",
     "clean": "rimraf dist",
-    "build": "tsup"
+    "build": "esbuild src/index.ts --outdir=dist --target=node16 --platform=node --format=cjs --bundle --minify"
   },
   "keywords": [
     "pdfmerger",
@@ -20,18 +20,16 @@
     "@types/node": "^18.8.2",
     "@typescript-eslint/eslint-plugin": ">=5.31.0",
     "@typescript-eslint/parser": ">=5.31.0",
+    "esbuild": "^0.15.10",
     "eslint": ">=8.0.0",
     "eslint-config-xo": "^0.42.0",
     "eslint-config-xo-typescript": "^0.53.0",
     "rimraf": "^3.0.2",
-    "tsup": "^6.2.3",
     "typescript": ">=4.4"
   },
   "dependencies": {
     "actions-toolkit": "^6.0.1",
-    "execa": "^6.1.0",
     "ilovepdf-freedom": "^1.1.0"
   },
-  "packageManager": "yarn@3.2.4",
-  "type": "module"
+  "packageManager": "yarn@3.2.4"
 }

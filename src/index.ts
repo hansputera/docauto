@@ -1,6 +1,7 @@
 import {Toolkit} from 'actions-toolkit';
 import {ILovePDF} from 'ilovepdf-freedom';
 import path from 'node:path';
+import {execa} from 'execa';
 import {mergePdfFiles, officeToPdfMany} from './functions';
 import {findFiles, parseConfig} from './utils';
 
@@ -28,28 +29,28 @@ Toolkit.run(async tool => {
 		tool.log.success(`Successfuly merging ${findedFiles.length} files`);
 
 		try {
-			await tool.exec('git', [
+			await execa('git', [
 				'config',
 				'--global',
 				'user.email',
 				'github-actions[bot]@users.noreply.github.com',
 			]);
-			await tool.exec('git', [
+			await execa('git', [
 				'config',
 				'--global',
 				'user.name',
 				'github-actions[bot]',
 			]);
-			await tool.exec('git', [
+			await execa('git', [
 				'add',
 				'.',
 			]);
-			await tool.exec('git', [
+			await execa('git', [
 				'commit',
 				'-m',
 				'docauto: success merge',
 			]);
-			await tool.exec('git', ['push']);
+			await execa('git', ['push']);
 
 			tool.exit.success('Done!');
 		} catch (error: unknown) {
